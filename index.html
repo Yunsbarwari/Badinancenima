@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سینەما بادینی - Badini Cinema</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&display=swap');
+body {
+font-family: 'Noto Naskh Arabic', sans-serif;
+background-color: #0f172a;
+color: #f8fafc;
+}
+.movie-card:hover .movie-overlay {
+opacity: 1;
+}
+</style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+<!-- Header / Navigation -->
+<header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<h1 class="text-2xl font-bold text-red-600 flex items-center gap-2">
+<i class="fas fa-film"></i> سینەما بادینی
+</h1>
+<nav class="hidden md:flex gap-6 text-sm font-semibold">
+<a href="#" class="hover:text-red-500 transition">سەرەکی</a>
+<a href="#" class="hover:text-red-500 transition">فیلمێن ئۆکشن</a>
+<a href="#" class="hover:text-red-500 transition">فیلمێن دراما</a>
+<a href="#" class="hover:text-red-500 transition">کۆمیدی</a>
+<a href="#" class="hover:text-red-500 transition">دۆکیومێنتاری</a>
+</nav>
+<div class="relative">
+<input type="text" placeholder="لێگەڕیان بۆ فیلمی..." class="bg-slate-800 text-sm rounded-full px-4 py-2 pl-8 focus:outline-none focus:ring-2 focus:ring-red-600 w-40 md:w-60">
+<i class="fas fa-search absolute left-3 top-2.5 text-slate-400 text-sm"></i>
+</div>
+</div>
+</header>
+<!-- Hero Banner -->
+<section class="relative bg-slate-800 py-16 px-4 mb-8">
+<div class="container mx-auto max-w-4xl text-center">
+<h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-white">بەخێرهاتی بۆ سینەما بادینی</h2>
+<p class="text-slate-300 text-base md:text-lg mb-6">خۆشترین و تازەترین فیلم ب ژێرنووس و دۆبلاژکرنا بادینی تەماشا بکە ب کوالیتییا بەرز.</p>
+<a href="#movies" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+‎تەماشاکرنا فیلمێن نوو
+</a>
+</div>
+</section>
+<!-- Main Movie Section -->
+<main id="movies" class="container mx-auto px-4 my-8 flex-grow">
+<h3 class="text-xl font-bold mb-6 border-r-4 border-red-600 pr-3">تازەترین فیلمێن زێدەکرینی</h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+<!-- Movie Card 1 -->
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg relative group movie-card">
+<img src="https://picsum.photos/300/450?random=1" alt="Movie Poster" class="w-full h-64 object-cover">
+<div class="p-3">
+<h4 class="font-bold text-sm mb-1 truncate">فەرماندە - Commander</h4>
+<p class="text-xs text-slate-400">ئۆکشن | ژێرنووس بادینی</p>
+</div>
+<div class="movie-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 p-4 text-center">
+<h4 class="font-bold mb-2">فەرماندە</h4>
+<span class="text-yellow-400 text-xs mb-4"><i class="fas fa-star"></i> 8.5/10</span>
+<button class="bg-red-600 text-white text-xs font-bold py-2 px-4 rounded-full hover:bg-red-700">تەماشاکرن</button>
+</div>
+</div>
+<!-- Movie Card 2 -->
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg relative group movie-card">
+<img src="https://picsum.photos/300/450?random=2" alt="Movie Poster" class="w-full h-64 object-cover">
+<div class="p-3">
+<h4 class="font-bold text-sm mb-1 truncate">چیرۆکا دۆلێ - Valley Story</h4>
+<p class="text-xs text-slate-400">دراما | دۆبلاژ بادینی</p>
+</div>
+<div class="movie-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 p-4 text-center">
+<h4 class="font-bold mb-2">چیرۆکا دۆلێ</h4>
+<span class="text-yellow-400 text-xs mb-4"><i class="fas fa-star"></i> 7.9/10</span>
+<button class="bg-red-600 text-white text-xs font-bold py-2 px-4 rounded-full hover:bg-red-700">تەماشاکرن</button>
+</div>
+</div>
+<!-- Movie Card 3 -->
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg relative group movie-card">
+<img src="https://picsum.photos/300/450?random=3" alt="Movie Poster" class="w-full h-64 object-cover">
+<div class="p-3">
+<h4 class="font-bold text-sm mb-1 truncate">پێکەنینێن شێتانە</h4>
+<p class="text-xs text-slate-400">کۆمیدی | ژێرنووس بادینی</p>
+</div>
+<div class="movie-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 p-4 text-center">
+<h4 class="font-bold mb-2">پێکەنینێن شێتانە</h4>
+<span class="text-yellow-400 text-xs mb-4"><i class="fas fa-star"></i> 8.1/10</span>
+<button class="bg-red-600 text-white text-xs font-bold py-2 px-4 rounded-full hover:bg-red-700">تەماشاکرن</button>
+</div>
+</div>
+<!-- Movie Card 4 -->
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg relative group movie-card">
+<img src="https://picsum.photos/300/450?random=4" alt="Movie Poster" class="w-full h-64 object-cover">
+<div class="p-3">
+<h4 class="font-bold text-sm mb-1 truncate">سفرا تاریکی - Dark Zero</h4>
+<p class="text-xs text-slate-400">ترسناک | ژێرنووس بادینی</p>
+</div>
+<div class="movie-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 p-4 text-center">
+<h4 class="font-bold mb-2">سفرا تاریکی</h4>
+<span class="text-yellow-400 text-xs mb-4"><i class="fas fa-star"></i> 7.4/10</span>
+<button class="bg-red-600 text-white text-xs font-bold py-2 px-4 rounded-full hover:bg-red-700">تەماشاکرن</button>
+</div>
+</div>
+<!-- Movie Card 5 -->
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg relative group movie-card">
+<img src="https://picsum.photos/300/450?random=5" alt="Movie Poster" class="w-full h-64 object-cover">
+<div class="p-3">
+<h4 class="font-bold text-sm mb-1 truncate">گەشتا ئەسمانی</h4>
+<p class="text-xs text-slate-400">زانستی | ژێرنووس بادینی</p>
+</div>
+<div class="movie-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 p-4 text-center">
+<h4 class="font-bold mb-2">گەشتا ئەسمانی</h4>
+<span class="text-yellow-400 text-xs mb-4"><i class="fas fa-star"></i> 9.0/10</span>
+<button class="bg-red-600 text-white text-xs font-bold py-2 px-4 rounded-full hover:bg-red-700">تەماشاکرن</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 py-6 mt-12 text-center text-xs text-slate-400">
+<p>© 2026 سینەما بادینی - هەمی ماف پاراستینە.</p>
+</footer>
+</body>
+</html>
